@@ -72,7 +72,7 @@ module.exports = {
     }
   },
 
-  // create an Reaction to a Thought
+  // create a Reaction to a Thought
   async createReaction(req, res) {
     console.log("You are adding a reaction");
 
