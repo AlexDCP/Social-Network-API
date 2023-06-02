@@ -1,7 +1,7 @@
 {
   "name": "Social-Network-API",
   "version": "1.0.1",
-  "description": "Mongoose back-end project - Main",
+  "description": "A starter api for a social network",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

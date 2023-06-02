@@ -31,7 +31,11 @@ module.exports = {
   // create a new thought
   async createThought(req, res) {
     try {
-      const thoughts = await Thoughts.create(req.body);
+      const thoughts = await Thoughts.create(req.body
+        // { _id: req.params.thoughtsId },
+        // { $addToSet: { thoughts: req.body } },
+        // { new: true }
+      );
       res.json(thoughts);
     } catch (err) {
       res.status(500).json(err);
@@ -57,7 +61,7 @@ module.exports = {
   async updateThought(req, res) {
     try {
       const thought = await Thoughts.findOneAndUpdate(
-        { _id: req.params.thoughtId },
+        { _id: req.params.thoughtsId },
         { $set: req.body },
         { new: true }
       );
@@ -78,7 +82,7 @@ module.exports = {
 
     try {
       const thought = await Thoughts.findOneAndUpdate(
-        { _id: req.params.thoughtId },
+        { _id: req.params.thoughtsId },
         { $addToSet: { reactions: req.body } },
         { new: true }
       );
@@ -98,8 +102,8 @@ module.exports = {
   async removeReaction(req, res) {
     try {
       const thought = await Thoughts.findOneAndUpdate(
-        { _id: req.params.thoughtId },
-        { $pull: { reactions: { reactionId: req.params.reactionId } } },
+        { _id: req.params.thoughtsId },
+        { $pull: { reactions: { reactionsId: req.params.reactionsId } } },
         { new: true }
       );
 
