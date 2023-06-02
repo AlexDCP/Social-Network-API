@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction');
 
 const thoughtsSchema = new Schema(
   {
@@ -16,6 +17,7 @@ const thoughtsSchema = new Schema(
       type: Date,
       default: Date.now,
     },
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
