@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains a lightweight social network API built using Node.js, Express, MongoDB, and Mongoose. The API allows users to create accounts, post messages, follow other users, and retrieve a personalized feed of posts from the users they follow.
+This repository contains a lightweight social network API built using Node.js, Express, MongoDB, and Mongoose. The API allows users to create accounts, post thoughts, follow other users, and add reactions to thoughts from the users they are freinds with.
 
 The  social network API provides a simple and efficient way to build a social networking platform. With this API, developers can easily integrate user account creation, authentication, posting, friending other users, and leaving thoughts. By leveraging the power of MongoDB and Mongoose, the API ensures reliable and scalable data storage and retrieval. With straightforward API endpoints, developers can quickly implement social network features and enable users to connect, share, and engage with each other seamlessly. Whether you're building a small community or a larger social networking application, this lightweight API simplifies the development process, allowing you to focus on creating a rich user experience.
 
